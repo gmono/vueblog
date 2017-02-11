@@ -4,7 +4,7 @@
     <div class="cont">
       <div class="space"></div>
       <div class="name">{{name}}</div>
-      <div class="say">{{say}}</div>
+      <div class="say" @mouseenter="hoverin">{{say}}</div>
     </div>
   </div>
 </template>
@@ -14,7 +14,9 @@
     data() {
       return {};
     },
-    props: ["name", "say", "background"]
+    props: ["name", "say", "background"],
+    methods:{
+    }
   };
 
 </script>
@@ -57,6 +59,13 @@
     margin-top: 10px;
     font-style: italic;
     color: slategrey;
+    transition: all 0.5s ease-in;
+    display: inline-block;
+    padding: 3px 70px 3px 10px;
+  }
+  .say:hover{
+    background-color: rgba(240,255,255,0.5);
+    color:black;
   }
   .cont{
       position: absolute;

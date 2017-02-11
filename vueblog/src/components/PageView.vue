@@ -1,13 +1,13 @@
 <template>
     <div class="view-top">
         <div class="view-title">
-            <div @click="back">返回</div>
+            <div @click="back" class="enjoy-button">返回</div>
             <div class="view-title">{{content.title}}</div>
         </div>
         <hr>
         <div class="view-time">{{content.time}}</div>
         <hr>
-        <div class="view-content">
+        <div class="view-content paper">
 
             {{content.text}}
         </div>
@@ -31,11 +31,10 @@
 <style scoped>
 .view-top{
     width:100%;
-    background-color: rgba(10, 10,10, 0.5);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px;
     height: 100%;
-    color:aliceblue;
+    color:black;
     box-sizing: border-box;
     
 }
@@ -46,30 +45,26 @@
         width:100%;
         position: relative;
         text-align: center;
+        padding: 5px 0 5px 0;
     }
     .view-title>*{
         font-family: "微软雅黑";
     }
     .view-title>div:last-child{
         text-align: center;
-        margin-left:3rem;
+        margin-left:5.5rem;
         display: inline;
     }
     .view-title>div:first-child{
         position: absolute;
-        background-color: salmon;
         cursor:pointer;
-        left:0;
-        top:0;
-        border-radius: 2px;
+        left:5px;
+        top:5px;
         font-size:0.9rem;
-        width: 2.5rem;
+        width: 5rem;
         height: 1.5rem;
         line-height: 1.5;
         text-align: center;
-    }
-    .view-title>div:first-child:hover{
-            background-color:bisque;
     }
     .view-time{
         text-align: right;
@@ -82,6 +77,11 @@
     }
     .view-content{
         padding: 20px;
+        /*padding-left: 50px;*/
+        text-indent: 2em;
         padding-bottom: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        color:black;
     }
 </style>

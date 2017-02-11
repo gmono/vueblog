@@ -12,16 +12,16 @@ let Item;
 export default Item={
     data(){
         return{
-            isblock:false
+            isblock:true
         };
     },
     props:['id','title','content','time','imgsrc'],
     methods:{
         hoverin(){
-            this.$data.isblock=true;
+            // this.$data.isblock=true;
         },
         hoverout(){
-            this.$data.isblock=false;
+            // this.$data.isblock=false;
         },
         click(){
             this.$emit("onclick",this.id);
@@ -34,19 +34,22 @@ export default Item={
 </script>
 <style scoped>
 .item-top{
-    border-top: 1px black solid;
-    border-bottom: 1px black solid;
-    margin:5px;
 
+    margin:5px;
+    margin-bottom: 20px;
+    box-shadow: lightgrey 0 0 10px 2px ;
+    transition: all 0.2s ease-in;
 }
 .item-top:hover{
-    box-shadow: rgba(0,0,0,0.5) 0 0 3px 2px ;
+    box-shadow: lightgrey 0 0 10px 5px ;
 }
 .line{
     font-family: "微软雅黑";
     height: 32px;
     line-height: 32px;
     cursor: pointer;
+        border-top: 1px black solid;
+    border-bottom: 1px black solid;
 }
 .line>div{
     float:right;

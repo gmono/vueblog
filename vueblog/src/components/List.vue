@@ -37,10 +37,11 @@ ul{
     text-indent: 5px;
 }
 .list-top{
-    
-    border-radius: 5px;
     overflow: hidden;
     width: 100%;
     color:cadetblue;
+    border-radius: 10px;
+        padding: 15px 10px 100px 5px;
+        box-sizing: border-box;
 }
 </style>

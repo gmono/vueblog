@@ -18,12 +18,12 @@
   let App;
   export default App = {
     data() {
-      
+      let obj=DataProvider.getinfo();//获取信息
       var ret= {
         datalist: [],
         nowpage: null,
-        name: "月落的博客",
-        say: "测试~~~~~",
+        name: obj.name,
+        say: obj.say,
         isloading:true
       };
       DataProvider.getlist((list)=>{
@@ -57,12 +57,17 @@
     height: 300px;
     width: 90%;
     margin: 0 auto;
+
   }
   .app-cont{
     min-height: 500px;
     margin-bottom: 100px;
     width: 100%;
-    background-color: rgba(10, 10,10, 0.5);
+    background-color: white;;
+        border-radius: 10px 10px 0 0 ;
+    box-shadow: lightgrey 0 0 5px 3px; 
+
+
   }
   .app-mask{
     text-align: center;
