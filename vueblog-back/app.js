@@ -42,15 +42,35 @@ xjson.parseString(str,{ explicitArray : false, ignoreAttrs : true },(err,result)
   info=result.root;
 });
 //
+//前端客户记录……
+let tm=new Date();
+let fpath="./logs/"+tm.getFullYear()+"-"+tm.getMonth()+"-"+tm.getDay()+".log";
+// if(!fs.exists(fpath)){
+//   let temp=fs.openSync(fpath,"a+");
+//   fs.close(temp);
+// }
+let logfile=fs.createWriteStream(fpath,{flags:"a+",autoClose:true});
+//
+//日志记录函数
+let log=(str)=>{
+  let temp=new Date();
+  let h=temp.getHours();
+  let m=temp.getMinutes();
+  let s=temp.getSeconds();
+  logfile.write("["+h+":"+m+":"+s+"]"+"\t"+str+"\n");
+}
 app.get('/list',function(req,res){
     res.send(JSON.stringify(list));
+    log(req.ip+"获取博客列表");
 });
 app.get('/cont',function(req,res){
     var id=req.query.id;
     res.send(JSON.stringify(list[id]));
+    log(req.ip+"获取文章 id="+id+" 标题："+list[id].title);
 });
 app.get('/info',function(req,res){
   res.send(JSON.stringify(info));
+  log(req.ip+"访问");
 })
 
 var sum=0;
