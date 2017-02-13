@@ -1,0 +1,18 @@
+<root>
+    <comment>
+        <title>测试一下评论功能</title>
+        <time>2010.2.3</time>
+        <content>fadfadfasdfasdfasdfasdf</content>
+        <ip>127.0.0.1</ip>
+        <rep>
+            <time>2010.2.3</time>
+            <content>fadfadfasdfasdfasdfasdf</content>
+            <ip>127.0.0.1</ip>
+        </rep>
+        <rep>
+            <time>2010.2.3</time>
+            <content>fadfadfasdfasdfasdfasdf</content>
+            <ip>127.0.0.1</ip>
+        </rep>
+    </comment>
+</root>
