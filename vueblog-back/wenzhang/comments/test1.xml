@@ -6,12 +6,12 @@
         <ip>127.0.0.1</ip>
         <rep>
             <time>2010.2.3</time>
-            <content>fadfadfasdfasdfasdfasdf</content>
+            <content>你好世界</content>
             <ip>127.0.0.1</ip>
         </rep>
         <rep>
             <time>2010.2.3</time>
-            <content>fadfadfasdfasdfasdfasdf</content>
+            <content>hello world</content>
             <ip>127.0.0.1</ip>
         </rep>
     </comment>

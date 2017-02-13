@@ -4,7 +4,7 @@
     <div class="cont">
       <div class="space"></div>
       <div class="name">{{name}}</div>
-      <div class="say" @mouseenter="hoverin">{{say}}</div>
+      <div class="say">{{say}}</div>
     </div>
   </div>
 </template>

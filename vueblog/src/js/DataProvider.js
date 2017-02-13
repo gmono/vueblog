@@ -55,7 +55,22 @@ export default DataProvider = {
         ret = JSON.parse(xhr.responseText);
         return ret;
       }
-    }
-    else return {name:"月落的博客",say:"默认结果"};
+    } else return {
+      name: "月落的博客",
+      say: "默认结果"
+    };
+  },
+  getcomment(id, cbk) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:1000/comment?id=' + id, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          let ret = JSON.parse(xhr.responseText);
+          cbk(ret);
+        }
+      }
+    };
+    xhr.send();
   }
 };
