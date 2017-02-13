@@ -134,7 +134,12 @@ app.get('/info',function(req,res){
   res.send(JSON.stringify(info));
   log(req.ip+"访问");
 })
-
+app.post('/comment/submit',(req,res)=>{
+  //评论提交到这里
+  let title="";
+  console.log("");
+  log(req.ip+"提交评论 标题："+title);
+});
 var sum=0;
 app.listen(1000,function(){
   console.log("connect "+sum++);

@@ -14,6 +14,7 @@
           评论加载中……
         </div>
         <comment-view :comments="comments" v-if="comments!=null"></comment-view>
+        
       </div>
     </div>
   </div>
