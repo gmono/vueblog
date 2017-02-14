@@ -1,5 +1,5 @@
 <template>
-  <div class="comment-item-top">
+  <div class="comment-item-top" @click="onclick">
     <div style="display: flex">
       <div class="c-i-left">
         <div class="c-i-ip">
@@ -30,7 +30,15 @@
     components: {
 
     },
-    methods: {}
+    methods: {
+      onclick(){
+        if(this.title!="")
+        {
+          //这代表这个是顶层评论控件
+          this.$emit("onrep","");//产生onrep事件
+        }
+      }
+    }
   }
 
 </script>
@@ -41,12 +49,12 @@
   }
   
   .c-i-left {
-    height: 64px;
-    width: 10em;
+    height: 80px;
+    width: 15em;
     background-color: azure;
     border: 2px grey solid;
     box-shadow: grey 0 0 10px 2px;
-    margin-right: 50px;
+    margin-right: 20px;
     box-sizing: border-box;
     word-break: break-all;
     word-wrap: break-word;
